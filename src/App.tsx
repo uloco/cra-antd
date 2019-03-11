@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Button from "antd/lib/button";
 
 const App = (): JSX.Element => (
   <div className="App">
@@ -19,6 +20,7 @@ const App = (): JSX.Element => (
       >
         Learn React
       </a>
+      <Button type="primary">Ant Design Button</Button>
     </header>
   </div>
 );
