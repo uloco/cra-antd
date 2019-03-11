@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Button from "antd/lib/button";
+import { Button } from "antd";
 
 const App = (): JSX.Element => (
   <div className="App">

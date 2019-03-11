@@ -35,8 +35,10 @@
     "@typescript-eslint/no-inferrable-types": "error",
     "@typescript-eslint/restrict-plus-operands": "error",
     "fp/no-unused-expression": "off",
+    "fp/no-mutation": ["error", {"commonjs": true}],
     "no-console": "off",
-    "import/order": "off"
+    "import/order": "off",
+    "import/newline-after-import": ""
   },
   "overrides": [
     {
