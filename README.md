@@ -15,6 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * redux-thunk / redux-promise for async promises
 * context api
 * eslint-fp
+* eslint-plugin-better
 
 
 ## Available Scripts
