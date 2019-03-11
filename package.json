@@ -2,22 +2,32 @@
   "name": "cra-antd",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint './src/*.{ts,tsx}'"
+  },
   "dependencies": {
     "@types/jest": "24.0.11",
     "@types/node": "11.11.0",
     "@types/react": "16.8.7",
     "@types/react-dom": "16.8.2",
+    "ramda": "^0.26.1",
     "react": "^16.8.4",
+    "react-app-polyfill": "^0.2.1",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8",
-    "typescript": "3.3.3333",
-    "react-app-polyfill": "^0.2.1"
+    "typescript": "3.3.3333"
   },
   "devDependencies": {
+    "@types/ramda": "^0.26.1",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
     "eslint-config-airbnb-typescript": "^1.1.0",
     "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-fp": "^2.3.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
@@ -27,29 +37,45 @@
     "prettier": "1.16.4",
     "typescript": "^3.3.3333"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint './src/*.{ts,tsx}'"
-  },
   "eslintConfig": {
     "extends": [
       "react-app",
       "airbnb-typescript",
       "plugin:@typescript-eslint/recommended",
+      "plugin:fp/recommended",
       "prettier",
       "prettier/@typescript-eslint"
     ],
     "parser": "@typescript-eslint/parser",
     "plugins": [
-      "@typescript-eslint"
+      "@typescript-eslint",
+      "fp"
     ],
     "parserOptions": {
       "project": "./tsconfig.json"
-    }
+    },
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": [
+        "warn",
+        {
+          "allowExpressions": true
+        }
+      ]
+    },
+    "overrides": [
+      {
+        "files": "*.test.{ts,tsx}",
+        "rules": {
+          "fp/no-unused-expression": "off",
+          "fp/no-nil": "off"
+        }
+      }
+    ]
   },
+  "eslintIgnore": [
+    "react-app-env.d.ts",
+    "serviceWorker.ts"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
