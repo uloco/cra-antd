@@ -7,16 +7,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## TODO
 
-* ramda
-* babel-plugin-ramda
-* highlandjs?
 * feathers integration?
 * redux
 * redux-thunk / redux-promise for async promises
 * context api
-* eslint-fp
-* eslint-plugin-better
-
 
 ## Available Scripts
 
