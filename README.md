@@ -5,6 +5,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Commands
 `npm init react-app <APP_NAME> --typescript`
 
+## TODO
+
+* ramda
+* babel-plugin-ramda
+* highlandjs?
+* feathers integration?
+* redux
+* redux-thunk / redux-promise for async promises
+* context api
+* eslint-fp
+
 
 ## Available Scripts
 
