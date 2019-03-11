@@ -1,6 +1,13 @@
-const { override, fixBabelImports, addLessLoader } = require("customize-cra");
+const {
+  override,
+  fixBabelImports,
+  addLessLoader,
+  addBabelPlugins,
+  addBundleVisualizer
+} = require("customize-cra");
 
 module.exports = override(
+  ...addBabelPlugins("ramda"),
   fixBabelImports("import", {
     libraryName: "antd",
     libraryDirectory: "es",
@@ -9,5 +16,6 @@ module.exports = override(
   addLessLoader({
     javascriptEnabled: true,
     modifyVars: { "@primary-color": "#1890ff" }
-  })
+  }),
+  addBundleVisualizer({}, true)
 );
