@@ -1,6 +1,12 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { Button } from "antd";
+import R from 'ramda'
+
+const onClick = (): void => {
+  console.log(R.add(20, 22));
+};
 
 const App = (): JSX.Element => (
   <div className="App">
@@ -19,6 +25,9 @@ const App = (): JSX.Element => (
       >
         Learn React
       </a>
+      <Button type="primary" onClick={onClick}>
+        Ant Design Button
+      </Button>
     </header>
   </div>
 );
